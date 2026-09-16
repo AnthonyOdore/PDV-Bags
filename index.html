@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>D&L Bolsas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="d&l oficial.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="rect_top_menu">
+            <div id="logo_top_cont">
+                <img src="d&l oficial.jpg" alt="logo D&L Bolsas" id="logo_top_menu">
+            </div>
+            <h3 id="nome_hora">----------</h3>
+            <h4 id="txt_menu" class="txt" onclick="abrir_fechar_menu()">Menu</h4>
+        </nav>
+        <div id="menu">
+            <ul class="txt">
+                <li onclick="abrir_tela_cad_ped()">Registrar novo pedido</li>
+                <li>Cadastrar Bolsa</li>
+                <li>Cadastrar Cliente</li>
+                <li onclick="cadastrarFuncionarioPrompt(event)">Cadastrar Funcionário</li>
+                <li>Relatório Pedidos</li>
+            </ul>
+        </div>
+    </header>
+    
+    <aside>
+        <div id="lista_pedidos">
+            
+        </div>
+    </aside>
+
+    <div id="rect_login">
+        <div id="rect_login_sub" class="txt">
+            <h2 id="txt_usuario_nome">NOME</h2>
+            <input type="text" name="usuario_nome" id="usuario_nome" autocomplete="off" required value="ANTHONY">
+            <h2 id="txt_usuario_senha">SENHA</h2>
+            <input type="password" name="usuario_senha" id="usuario_senha" autocomplete="off" required value="123114">
+            <button id="btn_entrar" class="btn" onclick="entrar()" >Entrar</button>
+            <h4 id="msg_erro"></h4>
+        </div>
+    </div>
+
+    <section id="tela_cad_pedido">
+        <button id="fechar_tela_ped" onclick="fechar_tela()">FECHAR</button>
+        <h2 id="txt_tela_cad_prod" class="txt">REGISTRAR NOVO PEDIDO</h2>
+        <div id="sub_tela">
+
+                <label for="input_nome_cliente" class="">CLIENTE</label>
+                <input type="text" class="input_tela_cad_prod" value="" name="input_nome_cliente" id="input_nome_cliente" required>
+
+                <label for="input_contato_cliente" class="">CONTATO</label>
+                <input type="text" class="input_tela_cad_prod" value="" name="input_contato_cliente" id="input_contato_cliente" required>    
+
+                <label for="input_endereco_cliente" class="">ENDEREÇO</label>
+                <input type="text" class="input_tela_cad_prod" value="" name="input_endereco_cliente" id="input_endereco_cliente">
+                <div class="sep"></div>
+                <label for="input_nome_bolsa" class="">BOLSA</label>
+                <input type="text" class="input_tela_cad_prod" value="" name="input_nome_bolsa" id="input_nome_bolsa" required>
+               
+                <label for="input_qntd_bolsa" class="">QUANTIDADE</label>
+                <input style="width: 30%" type="number" class="input_tela_cad_prod" value="" name="input_qntd_bolsa" id="input_qntd_bolsa" placeholder="UNDS" required>
+               
+                <label for="input_material_bolsa" class="">MATERIAL</label>
+                <input type="text" class="input_tela_cad_prod" value="" name="input_material_bolsa" id="input_material_bolsa">
+               
+                <label for="input_med_bolsa" class="">MEDIDAS</label>
+                <input style="width: 30%; min-width: 110px;" type="text" class="input_tela_cad_prod" value="" name="input_med_bolsa" id="input_med_bolsa">
+
+                <label for="input_cores_bolsa" class="">CORES</label>
+                <input type="text" class="input_tela_cad_prod" value="" name="input_cores_bolsa" id="input_cores_bolsa">
+               
+                <div class="sep" id="sep02"></div>
+
+                <label for="input_data_entrega" class="">DATA</label>
+                <input style="width: 30%; min-width: 110px;" type="date" class="input_tela_cad_prod" value="" name="input_data_entrega" id="input_data_entrega" required>
+               
+                <label for="input_forma_entrega" class="">FORMA ENTREGA</label>
+                <input style="width: 50%" type="text" class="input_tela_cad_prod" value="" name="input_forma_entrega" id="input_forma_entrega">
+               
+                <label for="input_valor" class="">VALOR</label>
+                <input type="number" class="input_tela_cad_prod" value="" name="input_valor" id="input_valor" required>
+
+                <label for="input_obs" class="">OBSERV.:</label>
+                <input type="text" class="input_tela_cad_prod" value="" name="input_obs" id="input_obs">
+        </div>
+        
+        <div id="btn_tela">
+            <button type="button" id="btn_salvar_pedido" class="btn" onclick="salvar_pedido(event)">SALVAR PEDIDO</button>
+            <button type="button" id="btn_limpar_pedido" class="btn" onclick="limpar_pedido(event)">LIMPAR</button>
+
+        </div>
+        
+           
+    </section>
+    <p id="teste_infos">mm</p>
+</body>
+
+<script src="script.js">
+   
+        
+</script>
+</html>
